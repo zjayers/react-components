@@ -1,24 +1,28 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 
-const PageOne = () => {
-  return <div>Page 1</div>;
-}
+import StreamList from './streams/StreamList';
+import StreamCreate from './streams/StreamCreate';
+import StreamView from './streams/StreamView';
+import StreamEdit from './streams/StreamEdit';
+import StreamDelete from './streams/StreamDelete';
+import history from '../history';
+import Header from './Header';
 
-
-const PageTwo = () => {
-  return <div>Page 2</div>;
-}
-
-const App = (props) => {
-  return (
-    <div>
-      <BrowserRouter>
-        <Route path='/' exact component={PageOne} />
-        <Route path='/2' component={PageTwo} />
-      </BrowserRouter>
-    </div>
-  );
-}
+const App = () => (
+  <div className="ui container">
+    <Router history={history}>
+      <Header />
+      <div>
+        <Route path="/" exact component={StreamList} />
+        <Route path="/streams/create" exact component={StreamCreate} />
+        <Route path="/streams/view/:id" exact component={StreamView} />
+        <Route path="/streams/edit/:id" exact component={StreamEdit} />
+        <Route path="/streams/delete/:id" exact component={StreamDelete} />
+      </div>
+    </Router>
+  </div>
+);
 
 export default App;
