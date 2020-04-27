@@ -1,22 +1,10 @@
 {
   "streams": [
     {
-      "title": "Guild Wars 2",
-      "description": "Help",
+      "title": "Hello There",
+      "description": "I am the poo YES",
       "userId": "100266231442498817286",
       "id": 1
-    },
-    {
-      "title": "Hello There 2",
-      "description": "The Best Stream Is Here! Isnt it?",
-      "userId": "100266231442498817286",
-      "id": 3
-    },
-    {
-      "title": "Hello",
-      "description": "Hello There Man",
-      "userId": "100266231442498817286",
-      "id": 5
     }
   ]
 }
